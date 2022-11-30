@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MainController;
+use App\Http\Controllers\StudentsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,5 +21,4 @@ Route::get('/services', [MainController::class, 'services']) ->name('services');
 Route::get('/contact', [MainController::class, 'contact']) ->name('contact');
 
 
-Route::post('' StudentsController);
-
+Route::post('student/store', [StudentsController::class, "store"])->name('student.store');
